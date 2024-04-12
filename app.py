@@ -52,5 +52,5 @@ def predict():
         predicted_class = class_names[predicted_label]  # Get the class name
         return f"Predicted class: {predicted_class}"
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
