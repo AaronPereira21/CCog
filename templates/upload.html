@@ -1,7 +1,18 @@
-<!doctype html>
-<title>Upload new File</title>
-<h1>Upload new File</h1>
-<form method=post enctype=multipart/form-data action="/predict">
-  <input type=file name=file>
-  <input type=submit value=Upload>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Predicted class: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>

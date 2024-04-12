@@ -50,7 +50,8 @@ def predict():
         model = load_model('my_model.h5')  # Load the model
         predicted_label = process_image(file_path, model)
         predicted_class = class_names[predicted_label]  # Get the class name
-        return f"Predicted class: {predicted_class}"
+        return render_template('upload.html', prediction=predicted_class)
+
 
 # if __name__ == '__main__':
 #     app.run(debug=True)
